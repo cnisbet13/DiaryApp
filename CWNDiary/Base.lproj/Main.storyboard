@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Md-Yo-3KD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="SUH-WJ-eOj">
+            <objects>
+                <tableViewController id="RxW-LQ-4Ib" customClass="EntryListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NaD-8A-hWV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="9UF-QS-lbA">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9UF-QS-lbA" id="hRh-iq-8FG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RxW-LQ-4Ib" id="BiN-uZ-iYS"/>
+                            <outlet property="delegate" destination="RxW-LQ-4Ib" id="SwR-7o-dHQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="SJX-J9-uf5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Es7-9Y-Ahv">
+                            <connections>
+                                <segue destination="dTs-d5-Ofd" kind="modal" id="dhd-Dv-CAF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9W-QI-2NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570.66666666666663" y="270.74666666666667"/>
+        </scene>
+        <!--New Diary Entry View Controller-->
+        <scene sceneID="5g7-nQ-oea">
+            <objects>
+                <viewController id="4Pd-5i-9Qj" customClass="NewDiaryEntryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fde-6S-9jp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uvp-Hb-VPf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6d9-Jt-in3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zln-fL-GTU">
+                                <rect key="frame" x="36" y="177" width="249" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u4o-gV-hFb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qj3-EO-KRr">
+                            <connections>
+                                <action selector="cancelPressed:" destination="4Pd-5i-9Qj" id="YG4-Fy-cCg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="elb-0E-R4O">
+                            <connections>
+                                <action selector="donePressed:" destination="4Pd-5i-9Qj" id="oKa-P3-68q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="zln-fL-GTU" id="b9k-4Y-jqt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6OH-Gx-deT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="264"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D03-5B-euv">
+            <objects>
+                <navigationController id="6Md-Yo-3KD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gO3-WV-xd8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RxW-LQ-4Ib" kind="relationship" relationship="rootViewController" id="6Gr-VO-Lu4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyW-mS-u70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="270.74666666666667"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uC8-N4-wEw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dTs-d5-Ofd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aJH-Pz-W09">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Pd-5i-9Qj" kind="relationship" relationship="rootViewController" id="Tge-Dd-qYG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1W-kG-mhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975.4666666666667" y="264.12"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
