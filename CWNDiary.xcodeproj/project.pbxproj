@@ -17,7 +17,7 @@
 		962DE7801ABFD6D000FE493C /* CWNDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE77F1ABFD6D000FE493C /* CWNDiaryTests.m */; };
 		962DE78B1ABFF8A100FE493C /* CNCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE78A1ABFF8A100FE493C /* CNCoreDataStack.m */; };
 		962DE7C31AC40E9A00FE493C /* DiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE7C21AC40E9A00FE493C /* DiaryEntry.m */; };
-		962DE7C61AC4101300FE493C /* NewDiaryEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE7C51AC4101300FE493C /* NewDiaryEntryViewController.m */; };
+		962DE7C61AC4101300FE493C /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE7C51AC4101300FE493C /* EntryViewController.m */; };
 		962DE7C91ACA16BA00FE493C /* EntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE7C81ACA16BA00FE493C /* EntryListViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +50,8 @@
 		962DE78A1ABFF8A100FE493C /* CNCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNCoreDataStack.m; sourceTree = "<group>"; };
 		962DE7C11AC40E9A00FE493C /* DiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryEntry.h; sourceTree = "<group>"; };
 		962DE7C21AC40E9A00FE493C /* DiaryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryEntry.m; sourceTree = "<group>"; };
-		962DE7C41AC4101300FE493C /* NewDiaryEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDiaryEntryViewController.h; sourceTree = "<group>"; };
-		962DE7C51AC4101300FE493C /* NewDiaryEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDiaryEntryViewController.m; sourceTree = "<group>"; };
+		962DE7C41AC4101300FE493C /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		962DE7C51AC4101300FE493C /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		962DE7C71ACA16BA00FE493C /* EntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListViewController.h; sourceTree = "<group>"; };
 		962DE7C81ACA16BA00FE493C /* EntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,15 +95,15 @@
 		962DE75F1ABFD6D000FE493C /* CWNDiary */ = {
 			isa = PBXGroup;
 			children = (
-				962DE7641ABFD6D000FE493C /* AppDelegate.h */,
-				962DE7651ABFD6D000FE493C /* AppDelegate.m */,
-				962DE7891ABFF8A100FE493C /* CNCoreDataStack.h */,
-				962DE78A1ABFF8A100FE493C /* CNCoreDataStack.m */,
 				962DE7C71ACA16BA00FE493C /* EntryListViewController.h */,
 				962DE7C81ACA16BA00FE493C /* EntryListViewController.m */,
+				962DE7C41AC4101300FE493C /* EntryViewController.h */,
+				962DE7C51AC4101300FE493C /* EntryViewController.m */,
+				962DE7891ABFF8A100FE493C /* CNCoreDataStack.h */,
+				962DE78A1ABFF8A100FE493C /* CNCoreDataStack.m */,
+				962DE7641ABFD6D000FE493C /* AppDelegate.h */,
+				962DE7651ABFD6D000FE493C /* AppDelegate.m */,
 				962DE76D1ABFD6D000FE493C /* Main.storyboard */,
-				962DE7C41AC4101300FE493C /* NewDiaryEntryViewController.h */,
-				962DE7C51AC4101300FE493C /* NewDiaryEntryViewController.m */,
 				962DE7671ABFD6D000FE493C /* CWNDiary.xcdatamodeld */,
 				962DE7C11AC40E9A00FE493C /* DiaryEntry.h */,
 				962DE7C21AC40E9A00FE493C /* DiaryEntry.m */,
@@ -245,7 +245,7 @@
 				962DE78B1ABFF8A100FE493C /* CNCoreDataStack.m in Sources */,
 				962DE7C91ACA16BA00FE493C /* EntryListViewController.m in Sources */,
 				962DE7691ABFD6D000FE493C /* CWNDiary.xcdatamodeld in Sources */,
-				962DE7C61AC4101300FE493C /* NewDiaryEntryViewController.m in Sources */,
+				962DE7C61AC4101300FE493C /* EntryViewController.m in Sources */,
 				962DE7C31AC40E9A00FE493C /* DiaryEntry.m in Sources */,
 				962DE7661ABFD6D000FE493C /* AppDelegate.m in Sources */,
 				962DE76C1ABFD6D000FE493C /* ViewController.m in Sources */,

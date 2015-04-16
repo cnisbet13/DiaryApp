@@ -18,6 +18,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9UF-QS-lbA" id="hRh-iq-8FG">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dTs-d5-Ofd" kind="modal" identifier="edit" id="5VQ-We-jKM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -28,19 +31,19 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="SJX-J9-uf5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Es7-9Y-Ahv">
                             <connections>
-                                <segue destination="dTs-d5-Ofd" kind="modal" id="dhd-Dv-CAF"/>
+                                <segue destination="dTs-d5-Ofd" kind="modal" identifier="edit" id="dhd-Dv-CAF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9W-QI-2NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="570.66666666666663" y="270.74666666666667"/>
+            <point key="canvasLocation" x="626" y="1012"/>
         </scene>
-        <!--New Diary Entry View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="5g7-nQ-oea">
             <objects>
-                <viewController id="4Pd-5i-9Qj" customClass="NewDiaryEntryViewController" sceneMemberID="viewController">
+                <viewController id="4Pd-5i-9Qj" customClass="EntryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fde-6S-9jp"/>
                         <viewControllerLayoutGuide type="bottom" id="Uvp-Hb-VPf"/>
@@ -60,12 +63,12 @@
                     <navigationItem key="navigationItem" id="u4o-gV-hFb">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qj3-EO-KRr">
                             <connections>
-                                <action selector="cancelPressed:" destination="4Pd-5i-9Qj" id="YG4-Fy-cCg"/>
+                                <action selector="cancelWasPressed:" destination="4Pd-5i-9Qj" id="rKP-u6-7fk"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="elb-0E-R4O">
                             <connections>
-                                <action selector="donePressed:" destination="4Pd-5i-9Qj" id="oKa-P3-68q"/>
+                                <action selector="doneWasPressed:" destination="4Pd-5i-9Qj" id="Wrk-FF-Jkz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OH-Gx-deT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="264"/>
+            <point key="canvasLocation" x="994" y="270"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D03-5B-euv">
@@ -91,7 +94,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyW-mS-u70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.33333333333334" y="270.74666666666667"/>
+            <point key="canvasLocation" x="132" y="1012"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uC8-N4-wEw">
@@ -109,7 +112,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u1W-kG-mhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975.4666666666667" y="264.12"/>
+            <point key="canvasLocation" x="592" y="270"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -117,4 +120,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="5VQ-We-jKM"/>
+    </inferredMetricsTieBreakers>
 </document>

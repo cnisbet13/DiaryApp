@@ -12,20 +12,24 @@
 	<dict>
 		<key>8F41B4E3B45357F56988EF89B83EB7E9F4DBA817</key>
 		<string>https://github.com/cnisb044/Bill-Splitter.git</string>
+		<key>9A5B56EB852D86F3B68FD540477D28B6D51C7C01</key>
+		<string>https://github.com/cnisbet13/DiaryApp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CWNDiary/CWNDiary.xcodeproj</string>
+	<string>CWNDiary.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8F41B4E3B45357F56988EF89B83EB7E9F4DBA817</key>
-		<string>../../..</string>
+		<string>../../../..</string>
+		<key>9A5B56EB852D86F3B68FD540477D28B6D51C7C01</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/cnisb044/Bill-Splitter.git</string>
+	<string>https://github.com/cnisbet13/DiaryApp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>8F41B4E3B45357F56988EF89B83EB7E9F4DBA817</string>
+	<string>9A5B56EB852D86F3B68FD540477D28B6D51C7C01</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>8F41B4E3B45357F56988EF89B83EB7E9F4DBA817</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Xcode</string>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9A5B56EB852D86F3B68FD540477D28B6D51C7C01</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CWNDiary</string>
 		</dict>
 	</array>
 </dict>
