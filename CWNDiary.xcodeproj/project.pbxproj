@@ -19,6 +19,8 @@
 		962DE7C31AC40E9A00FE493C /* DiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE7C21AC40E9A00FE493C /* DiaryEntry.m */; };
 		962DE7C61AC4101300FE493C /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE7C51AC4101300FE493C /* EntryViewController.m */; };
 		962DE7C91ACA16BA00FE493C /* EntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962DE7C81ACA16BA00FE493C /* EntryListViewController.m */; };
+		96322D1B1AE070B7007AA5EF /* CNNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96322D1A1AE070B7007AA5EF /* CNNavigationController.m */; };
+		96322D1E1AE07493007AA5EF /* EntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96322D1D1AE07493007AA5EF /* EntryCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		962DE7C51AC4101300FE493C /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		962DE7C71ACA16BA00FE493C /* EntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListViewController.h; sourceTree = "<group>"; };
 		962DE7C81ACA16BA00FE493C /* EntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListViewController.m; sourceTree = "<group>"; };
+		96322D191AE070B7007AA5EF /* CNNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNavigationController.h; sourceTree = "<group>"; };
+		96322D1A1AE070B7007AA5EF /* CNNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNavigationController.m; sourceTree = "<group>"; };
+		96322D1C1AE07493007AA5EF /* EntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryCell.h; sourceTree = "<group>"; };
+		96322D1D1AE07493007AA5EF /* EntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +101,14 @@
 		962DE75F1ABFD6D000FE493C /* CWNDiary */ = {
 			isa = PBXGroup;
 			children = (
+				96322D191AE070B7007AA5EF /* CNNavigationController.h */,
+				96322D1A1AE070B7007AA5EF /* CNNavigationController.m */,
 				962DE7C71ACA16BA00FE493C /* EntryListViewController.h */,
 				962DE7C81ACA16BA00FE493C /* EntryListViewController.m */,
 				962DE7C41AC4101300FE493C /* EntryViewController.h */,
 				962DE7C51AC4101300FE493C /* EntryViewController.m */,
+				96322D1C1AE07493007AA5EF /* EntryCell.h */,
+				96322D1D1AE07493007AA5EF /* EntryCell.m */,
 				962DE7891ABFF8A100FE493C /* CNCoreDataStack.h */,
 				962DE78A1ABFF8A100FE493C /* CNCoreDataStack.m */,
 				962DE7641ABFD6D000FE493C /* AppDelegate.h */,
@@ -242,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96322D1B1AE070B7007AA5EF /* CNNavigationController.m in Sources */,
 				962DE78B1ABFF8A100FE493C /* CNCoreDataStack.m in Sources */,
+				96322D1E1AE07493007AA5EF /* EntryCell.m in Sources */,
 				962DE7C91ACA16BA00FE493C /* EntryListViewController.m in Sources */,
 				962DE7691ABFD6D000FE493C /* CWNDiary.xcdatamodeld in Sources */,
 				962DE7C61AC4101300FE493C /* EntryViewController.m in Sources */,
