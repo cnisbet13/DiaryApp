@@ -14,6 +14,8 @@
 @interface EntryCell : UITableViewCell
 
 
+- (void)configureCellForEntry:(DiaryEntry *)entry;
+
 + (CGFloat)heightForEntry:(DiaryEntry *)entry;
 
 @end
