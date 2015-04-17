@@ -9,9 +9,14 @@
 #import "EntryViewController.h"
 #import "CNCoreDataStack.h"
 #import "DiaryEntry.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface EntryViewController () <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface EntryViewController () <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate>
 
+
+@property (nonatomic, strong) NSString *location;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @property (nonatomic, strong) UIImage *pickedImage;
 
@@ -51,12 +56,15 @@
     } else {
         self.pickedMood = DiaryEntryMoodGood;
         date = [NSDate date];
+        [self loadLocation];
     }
     
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
     [dateFormater setDateFormat:@"EEEE MMMM d, yyyy"];
     self.dateLabel.text = [dateFormater stringFromDate:date];
     self.textView.inputAccessoryView = self.accessoryView;
+    self.imageButton.layer.cornerRadius = CGRectGetWidth(self.imageButton.frame)/2.0f;
+    
 }
 
 
@@ -75,12 +83,33 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)loadLocation{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = 1000;
+    
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    [self.locationManager stopUpdatingLocation];
+    CLLocation *location = [locations firstObject];
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = [placemarks firstObject];
+        self.location = placemark.name;
+        
+    }];
+}
+
 - (void)insertDiaryEntry {
     CNCoreDataStack *coreDataStack = [CNCoreDataStack defaultStack];
     DiaryEntry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"DiaryEntry" inManagedObjectContext:coreDataStack.managedObjectContext];
     entry.body = self.textView.text;
     entry.date = [[NSDate date] timeIntervalSince1970];
     entry.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    entry.location = self.location;
     [coreDataStack saveContext];
 }
 
