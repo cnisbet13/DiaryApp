@@ -113,6 +113,7 @@
     entry.date = [[NSDate date] timeIntervalSince1970];
     entry.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
     entry.location = self.location;
+    entry.mood = self.pickedMood;
     [coreDataStack saveContext];
 }
 
@@ -153,6 +154,7 @@
     
     CNCoreDataStack *coreDataStack = [CNCoreDataStack defaultStack];
     self.entry.imageData = UIImageJPEGRepresentation(self.pickedImage, 0.75);
+    self.entry.mood = self.pickedMood;
     [coreDataStack saveContext];
 }
 
