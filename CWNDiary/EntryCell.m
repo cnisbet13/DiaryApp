@@ -9,12 +9,12 @@
 #import "EntryCell.h"
 #import "DiaryEntry.h"
 #import <QuartzCore/QuartzCore.h>
+#import <CoreLocation/CoreLocation.h>
 
 
-@interface EntryCell ()
+@interface EntryCell ()<CLLocationManagerDelegate>
 //Private IBOutlets
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;

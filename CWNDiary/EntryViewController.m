@@ -87,8 +87,11 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = 1000;
-    
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
     [self.locationManager startUpdatingLocation];
+
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
@@ -99,8 +102,8 @@
     [geoCoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
         CLPlacemark *placemark = [placemarks firstObject];
         self.location = placemark.name;
-        
     }];
+    NSLog(@"%@", [locations lastObject]);
 }
 
 - (void)insertDiaryEntry {
